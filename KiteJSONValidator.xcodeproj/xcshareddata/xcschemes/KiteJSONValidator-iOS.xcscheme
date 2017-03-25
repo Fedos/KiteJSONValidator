@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "67B6B119188C331200E1630A"
-               BuildableName = "KiteJSONValidatorTestsOld.xctest"
-               BlueprintName = "KiteJSONValidatorTestsOld"
-               ReferencedContainer = "container:KiteJSONValidator.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "37C8BA18191058D1004D3E23"
-               BuildableName = "KiteJSONValidator.bundle"
-               BlueprintName = "KiteJSONResources"
+               BlueprintIdentifier = "37D0B4651E8706C100160F6D"
+               BuildableName = "KiteJSONValidator.framework"
+               BlueprintName = "KiteJSONValidator"
                ReferencedContainer = "container:KiteJSONValidator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,13 +32,22 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "67B6B119188C331200E1630A"
-               BuildableName = "KiteJSONValidatorTestsOld.xctest"
-               BlueprintName = "KiteJSONValidatorTestsOld"
+               BlueprintIdentifier = "37D0B46D1E8706C200160F6D"
+               BuildableName = "KiteJSONValidatorTests.xctest"
+               BlueprintName = "KiteJSONValidatorTests"
                ReferencedContainer = "container:KiteJSONValidator.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "37D0B4651E8706C100160F6D"
+            BuildableName = "KiteJSONValidator.framework"
+            BlueprintName = "KiteJSONValidator"
+            ReferencedContainer = "container:KiteJSONValidator.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -69,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "67B6B119188C331200E1630A"
-            BuildableName = "KiteJSONValidatorTestsOld.xctest"
-            BlueprintName = "KiteJSONValidatorTestsOld"
+            BlueprintIdentifier = "37D0B4651E8706C100160F6D"
+            BuildableName = "KiteJSONValidator.framework"
+            BlueprintName = "KiteJSONValidator"
             ReferencedContainer = "container:KiteJSONValidator.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -84,6 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "37D0B4651E8706C100160F6D"
+            BuildableName = "KiteJSONValidator.framework"
+            BlueprintName = "KiteJSONValidator"
+            ReferencedContainer = "container:KiteJSONValidator.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

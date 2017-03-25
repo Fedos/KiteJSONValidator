@@ -118,10 +118,8 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         NSBundle *mainBundle = [NSBundle bundleForClass:[self class]];
-        NSString *bundlePath = [mainBundle pathForResource:@"KiteJSONValidator" ofType:@"bundle"];
-        NSBundle *resourceBundle = [NSBundle bundleWithPath:bundlePath];
-        NSString *rootSchemaPath = [resourceBundle pathForResource:@"schema" ofType:@""];
-        NSAssert(rootSchemaPath != NULL, @"Root schema not found in bundle: %@", resourceBundle.bundlePath);
+        NSString *rootSchemaPath = [mainBundle pathForResource:@"schema" ofType:@""];
+        NSAssert(rootSchemaPath != NULL, @"Root schema not found in bundle: %@", mainBundle.bundlePath);
 
         NSData *rootSchemaData = [NSData dataWithContentsOfFile:rootSchemaPath];
         NSError *error = nil;
