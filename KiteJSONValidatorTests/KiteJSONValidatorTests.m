@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "KiteJSONValidator.h"
+#import <KiteJSONValidator/KiteJSONValidator.h>
 
 @interface Tests : XCTestCase
 
@@ -18,25 +18,24 @@
 - (void)setUp
 {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown
 {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
 - (void)testDraft4Suite
 {
-    NSBundle * mainBundle = [NSBundle bundleForClass:[self class]];
-    NSArray * paths = [mainBundle pathsForResourcesOfType:@"json" inDirectory:@"JSON-Schema-Test-Suite/tests/draft4"];
-    NSString * directory = [[mainBundle resourcePath] stringByAppendingPathComponent:@"JSON-Schema-Test-Suite/remotes"];
-    NSArray * refPaths = [self recursivePathsForResourcesOfType:@"json" inDirectory:directory];
+    NSBundle *mainBundle = [NSBundle bundleForClass:[self class]];
+    NSArray *paths = [mainBundle pathsForResourcesOfType:@"json" inDirectory:@"JSON-Schema-Test-Suite/tests/draft4"];
+    NSString *directory = [[mainBundle resourcePath] stringByAppendingPathComponent:@"JSON-Schema-Test-Suite/remotes"];
+    NSArray *refPaths = [self recursivePathsForResourcesOfType:@"json" inDirectory:directory];
 
     unsigned int successes = 0;
 
-    for (NSString * path in paths) {
+    for (NSString * path in paths)
+    {
         NSData *testData = [NSData dataWithContentsOfFile:path];
         NSError *error = nil;
         NSDictionary * tests = [NSJSONSerialization JSONObjectWithData:testData

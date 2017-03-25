@@ -6,7 +6,13 @@
 //  Copyright (c) 2013 Airsource Ltd. All rights reserved.
 //
 
-@import Foundation;
+#import <UIKit/UIKit.h>
+
+//! Project version number for KiteJSONValidator.
+FOUNDATION_EXPORT double KiteJSONValidatorVersionNumber;
+
+//! Project version string for KiteJSONValidator.
+FOUNDATION_EXPORT const unsigned char KiteJSONValidatorVersionString[];
 
 @protocol KiteJSONSchemaRefDelegate;
 
@@ -17,7 +23,7 @@
 /**
  Validates json against a draft4 schema.
  @see http://tools.ietf.org/html/draft-zyp-json-schema-04
- 
+
  @param jsonData The JSON to be validated
  @param schemaData The draft4 JSON schema to validate against
  @return Whether the json is validated.
@@ -27,42 +33,42 @@
 
 /**
  Used for adding an ENTIRE document to the list of reference schemas - the URL should therefore be fragmentless.
- 
+
  @param schemaData The data for the document to be converted to JSON
  @param url        The fragmentless URL for this document
- 
+
  @return Whether the reference schema was successfully added.
  */
 -(BOOL)addRefSchemaData:(NSData*)schemaData atURL:(NSURL*)url;
 
 /**
  Used for adding an ENTIRE document to the list of reference schemas - the URL should therefore be fragmentless.
- 
+
  @param schemaData           The data for the document to be converted to JSON
  @param url                  The fragmentless URL for this document
  @param shouldValidateSchema Whether the new reference schema should be validated against the "root" schema.
- 
+
  @return Whether the reference schema was successfully added.
  */
 -(BOOL)addRefSchemaData:(NSData*)schemaData atURL:(NSURL*)url validateSchema:(BOOL)shouldValidateSchema;
 
 /**
  Used for adding an ENTIRE document to the list of reference schemas - the URL should therefore be fragmentless.
- 
+
  @param schema The dictionary representation of the JSON schema (the JSON was therefore valid).
  @param url    The fragmentless URL for this document
- 
+
  @return Whether the reference schema was successfully added.
  */
 -(BOOL)addRefSchema:(NSDictionary*)schema atURL:(NSURL*)url;
 
 /**
  Used for adding an ENTIRE document to the list of reference schemas - the URL should therefore be fragmentless.
- 
+
  @param schema               The dictionary representation of the JSON schema (the JSON was therefore valid).
  @param url                  The fragmentless URL for this document
  @param shouldValidateSchema Whether the new reference schema should be validated against the "root" schema.
- 
+
  @return Whether the reference schema was successfully added.
  */
 -(BOOL)addRefSchema:(NSDictionary *)schema atURL:(NSURL *)url validateSchema:(BOOL)shouldValidateSchema;
@@ -71,7 +77,8 @@
 
 @protocol KiteJSONSchemaRefDelegate <NSObject>
 
--(NSData*)schemaValidator:(KiteJSONValidator*)validator requiresSchemaDataForRefURL:(NSURL*)refURL;
--(NSDictionary*)schemaValidator:(KiteJSONValidator*)validator requiresSchemaForRefURL:(NSURL*)refURL;
+- (NSData*)schemaValidator:(KiteJSONValidator*)validator requiresSchemaDataForRefURL:(NSURL*)refURL;
+- (NSDictionary*)schemaValidator:(KiteJSONValidator*)validator requiresSchemaForRefURL:(NSURL*)refURL;
 
 @end
+
